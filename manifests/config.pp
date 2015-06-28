@@ -211,6 +211,7 @@ class nginx::config(
 
   file { $log_dir:
     ensure => directory,
+    owner  => $daemon_user,
   }
 
   file {$client_body_temp_path:
